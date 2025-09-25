@@ -1,40 +1,30 @@
-import React from 'react';
-import { View, TextInput, StyleSheet } from 'react-native';
+import { AntDesign } from '@expo/vector-icons';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
-// Importa o componente Button da pasta 'Button'
-import Button from '../Button';
-
-const Input = ({ value, onChangeText, onPressButton }) => {
+const TaskItem = ({ task, onDelete }) => {
   return (
-    <View style={styles.inputContainer}>
-      <TextInput
-        style={styles.textInput}
-        placeholder="Adicionar nova tarefa..."
-        value={value}
-        onChangeText={onChangeText}
-      />
-      <Button
-        title="Adicionar"
-        onPress={onPressButton}
-      />
+    <View style={styles.taskItem}>
+      <Text style={styles.taskText}>{task.text}</Text>
+      <TouchableOpacity onPress={onDelete}>
+        <AntDesign name="close" size={24} color="#e72300ff" />
+      </TouchableOpacity>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  inputContainer: {
+  taskItem: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: 20,
-  },
-  textInput: {
-    borderWidth: 1,
-    borderColor: '#ccc',
-    padding: 10,
-    width: '70%',
+    padding: 15,
+    backgroundColor: '#d6d6d6ff',
     borderRadius: 8,
+    marginBottom: 10,
+  },
+  taskText: {
+    fontSize: 16,
   },
 });
 
-export default Input;
+export default TaskItem;

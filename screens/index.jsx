@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { View, FlatList, StyleSheet } from 'react-native';
 
-/** o caminho das pastas 'components' **/ 
 import Input from '../components/Input';
 import TaskItem from '../components/TaskItem';
 
@@ -53,7 +52,7 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingTop: 50,
     paddingHorizontal: 20,
-    backgroundColor: '#fff',
+    backgroundColor: '#fff', 
   },
 });
 

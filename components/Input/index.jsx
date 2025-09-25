@@ -1,14 +1,12 @@
-import { StyleSheet, TextInput, View } from 'react-native';
-
-/** chamando o componente button **/
-import Button from '../Button';
+import React from 'react';
+import { View, TextInput, Button, StyleSheet } from 'react-native';
 
 const Input = ({ value, onChangeText, onPressButton }) => {
   return (
     <View style={styles.inputContainer}>
       <TextInput
         style={styles.textInput}
-        placeholder="Adicionar nova tarefa..."
+        placeholder="Faça sua lista aqui !!!"
         value={value}
         onChangeText={onChangeText}
       />
