@@ -1,15 +1,21 @@
-import { Text, View } from "react-native";
+import React from 'react';
+import { StatusBar } from 'expo-status-bar';
+import { SafeAreaView, StyleSheet } from 'react-native';
 
-export default function Index() {
+/** chamando a screen **/
+import HomeScreen from './screens';
+
+export default function index() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
-    </View>
+    <SafeAreaView style={styles.container}>
+      <StatusBar style="auto" />
+      <HomeScreen />
+    </SafeAreaView>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});
